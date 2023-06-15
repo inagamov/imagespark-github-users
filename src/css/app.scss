@@ -1,0 +1,236 @@
+@import 'src/css/variables.scss';
+
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: $accent;
+}
+a:hover {
+  //color: #020202;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #020202;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.card {
+  padding: 2em;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/*
+ *
+ */
+.absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*
+ * margins
+ */
+
+
+// top
+.mt-sm {
+  margin-top: $margin-sm;
+}
+.mt-md {
+  margin-top: $margin-md;
+}
+.mt-lg {
+  margin-top: $margin-lg;
+}
+
+// bottom
+.mb-sm {
+  margin-bottom: $margin-sm;
+}
+.mb-md {
+  margin-bottom: $margin-md;
+}
+.mb-lg {
+  margin-bottom: $margin-lg;
+}
+
+// left
+.ml-sm {
+  margin-left: $margin-sm;
+}
+.ml-md {
+  margin-left: $margin-md;
+}
+.ml-lg {
+  margin-left: $margin-lg;
+}
+
+// right
+.mr-sm {
+  margin-right: $margin-sm;
+}
+.mr-md {
+  margin-right: $margin-md;
+}
+.mr-lg {
+  margin-right: $margin-lg;
+}
+
+// vertical axis
+.mx-sm {
+  @include margin(null, $margin-sm);
+}
+.mx-md {
+  @include margin(null, $margin-md);
+}
+.mx-lg {
+  @include margin(null, $margin-lg);
+}
+
+// horizontal axis
+.my-sm {
+  @include margin($margin-sm, null, $margin-sm, null);
+}
+.my-md {
+  @include margin($margin-md, null, $margin-md, null);
+}
+.my-lg {
+  @include margin($margin-lg, null, $margin-lg, null);
+}
+
+// all axes
+.ma-sm {
+  @include margin($margin-sm);
+}
+.ma-md {
+  @include margin($margin-md);
+}
+.ma-lg {
+  @include margin($margin-lg);
+}
+
+
+/*
+ * paddings
+ */
+// top
+.pt-sm {
+  padding-top: $padding-sm;
+}
+.pt-md {
+  padding-top: $padding-md;
+}
+.pt-lg {
+  padding-top: $padding-lg;
+}
+
+// bottom
+.pb-sm {
+  padding-bottom: $padding-sm;
+}
+.pb-md {
+  padding-bottom: $padding-md;
+}
+.pb-lg {
+  padding-bottom: $padding-lg;
+}
+
+// left
+.pl-sm {
+  padding-left: $padding-sm;
+}
+.pl-md {
+  padding-left: $padding-md;
+}
+.pl-lg {
+  padding-left: $padding-lg;
+}
+
+// right
+.pr-sm {
+  padding-right: $padding-sm;
+}
+.pr-md {
+  padding-right: $padding-md;
+}
+.pr-lg {
+  padding-right: $padding-lg;
+}
+
+// vertical axis
+.px-sm {
+  @include padding(null, $padding-sm);
+}
+.px-md {
+  @include padding(null, $padding-md);
+}
+.px-lg {
+  @include padding(null, $padding-lg);
+}
+
+// horizontal axis
+.py-sm {
+  @include padding($padding-sm, null, $padding-sm, null);
+}
+.py-md {
+  @include padding($padding-md, null, $padding-md, null);
+}
+.py-lg {
+  @include padding($padding-lg, null, $padding-lg, null);
+}
+
+// all axes
+.pa-sm {
+  @include padding($padding-sm);
+}
+.pa-md {
+  @include padding($padding-md);
+}
+.pa-lg {
+  @include padding($padding-lg);
+}
