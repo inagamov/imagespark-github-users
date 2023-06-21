@@ -1,0 +1,62 @@
+@font-face {
+    font-family: "icons";
+    src: url("./icons.woff?559857626299824fecc9b0bbffd4575f") format("woff"),
+url("./icons.woff2?559857626299824fecc9b0bbffd4575f") format("woff2");
+}
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+    font-family: icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close:before {
+    content: "\f101";
+}
+.icon-company:before {
+    content: "\f102";
+}
+.icon-error:before {
+    content: "\f103";
+}
+.icon-fork:before {
+    content: "\f104";
+}
+.icon-forward-slash:before {
+    content: "\f105";
+}
+.icon-github-mark:before {
+    content: "\f106";
+}
+.icon-left:before {
+    content: "\f107";
+}
+.icon-link:before {
+    content: "\f108";
+}
+.icon-pin:before {
+    content: "\f109";
+}
+.icon-repo:before {
+    content: "\f10a";
+}
+.icon-search:before {
+    content: "\f10b";
+}
+.icon-star:before {
+    content: "\f10c";
+}
+.icon-twitter:before {
+    content: "\f10d";
+}
+.icon-up:before {
+    content: "\f10e";
+}
+.icon-users-group:before {
+    content: "\f10f";
+}

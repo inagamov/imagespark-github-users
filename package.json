@@ -6,9 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "icons-font": "fantasticon src/assets/icons -o public/icons-font --normalize -t woff woff2 -g css",
+    "icons-font:watch": "watch 'npm run icons-font' src/assets/icons"
   },
   "dependencies": {
+    "axios": "^1.4.0",
+    "pinia": "^2.1.4",
     "prettier": "^2.8.8",
     "sass": "^1.63.4",
     "vue": "^3.2.47",

@@ -1,8 +1,16 @@
 <template>
   <div class="absolute-center">
-    <h1>404</h1>
-    <h2 style="opacity: 0.4">Oops. Nothing here...</h2>
+    <NotFoundComponent>
+      <template #text> 404 </template>
+    </NotFoundComponent>
 
-    <router-link to="/" class="mt-lg"> Go home </router-link>
+    <div class="row justify-center">
+      <button class="button">
+        <router-link to="/" class="mt-lg link--clear"> Go home </router-link>
+      </button>
+    </div>
   </div>
 </template>
+<script setup>
+import NotFoundComponent from "../components/NotFoundComponent.vue";
+</script>

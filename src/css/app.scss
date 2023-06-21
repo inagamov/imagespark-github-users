@@ -18,20 +18,139 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-a {
-  font-weight: 500;
-  color: $accent;
-}
-a:hover {
-  //color: #020202;
-}
-
+/*
+ * general
+ */
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
   margin: 0;
 }
 
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.container {
+  width: 700px;
+  max-width: 700px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/*
+ * text
+ */
+.text-center {
+  text-align: center;
+}
+
+.text-caption {
+  font-size: 12px;
+  color: $grey-2;
+  line-height: 24px;
+}
+
+.text-error {
+  color: red !important;
+  font-size: 12px;
+  margin: auto 0;
+  font-weight: 600;
+}
+
+/*
+ * flex
+ */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.column {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-end {
+  justify-content: end;
+}
+
+.no-wrap {
+  flex-wrap: nowrap;
+}
+
+.text-no-wrap {
+  white-space: nowrap;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*
+ * link
+ */
+a {
+  transition: .2s;
+}
+
+.link--clear  {
+  text-decoration: none;
+  color: $black;
+}
+
+.link--underline {
+  text-decoration: none;
+}
+.link--underline:hover {
+  text-decoration: underline !important;
+}
+
+.link--default {
+  color: $black;
+  text-decoration: none;
+}
+.link--default:hover {
+  color: $accent;
+
+  i {
+    color: $accent !important;
+  }
+}
+
+.link--blue {
+  color: $accent !important;
+
+  i {
+    color: $accent !important;
+  }
+}
+
+/*
+ * input
+ */
+.input--default {
+  border-radius: 6px;
+  border: 1px solid $grey;
+  padding: 0 8px;
+  height: 24px;
+}
+
+/*
+ * default button
+ */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -51,19 +170,29 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.card {
-  padding: 2em;
+/*
+ * custom button
+ */
+.button {
+  padding: 0 8px;
+  height: 28px;
+  font-size: 12px;
+  background: $secondary;
+  border: 1px solid $grey;
+  transition: .2s;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.button:active {
+  transform: scale(0.95);
+  outline: none;
+}
+
+.button:focus {
+  outline: 1px solid $black;
 }
 
 /*
- *
+ * positioning
  */
 .absolute-center {
   position: absolute;
@@ -75,9 +204,10 @@ button:focus-visible {
 /*
  * margins
  */
-
-
 // top
+.mt-xs {
+  margin-top: $margin-xs;
+}
 .mt-sm {
   margin-top: $margin-sm;
 }
@@ -87,8 +217,14 @@ button:focus-visible {
 .mt-lg {
   margin-top: $margin-lg;
 }
+.mt-none {
+  margin-top: $margin-none;
+}
 
 // bottom
+.mb-xs {
+  margin-bottom: $margin-xs;
+}
 .mb-sm {
   margin-bottom: $margin-sm;
 }
@@ -98,8 +234,14 @@ button:focus-visible {
 .mb-lg {
   margin-bottom: $margin-lg;
 }
+.mb-none {
+  margin-bottom: $margin-none;
+}
 
 // left
+.ml-xs {
+  margin-left: $margin-xs;
+}
 .ml-sm {
   margin-left: $margin-sm;
 }
@@ -109,8 +251,14 @@ button:focus-visible {
 .ml-lg {
   margin-left: $margin-lg;
 }
+.ml-none {
+  margin-left: $margin-none;
+}
 
 // right
+.mr-xs {
+  margin-right: $margin-xs;
+}
 .mr-sm {
   margin-right: $margin-sm;
 }
@@ -120,38 +268,59 @@ button:focus-visible {
 .mr-lg {
   margin-right: $margin-lg;
 }
+.mr-none {
+  margin-right: $margin-none;
+}
 
 // vertical axis
+.mx-xs {
+  margin: 0 $margin-xs;
+}
 .mx-sm {
-  @include margin(null, $margin-sm);
+  margin: 0 $margin-sm;
 }
 .mx-md {
-  @include margin(null, $margin-md);
+  margin: 0 $margin-md;
 }
 .mx-lg {
-  @include margin(null, $margin-lg);
+  margin: 0 $margin-lg;
+}
+.mx-none {
+  margin: 0 $margin-none;
 }
 
 // horizontal axis
+.my-xs {
+  margin: $margin-xs 0;
+}
 .my-sm {
-  @include margin($margin-sm, null, $margin-sm, null);
+  margin: $margin-sm 0;
 }
 .my-md {
-  @include margin($margin-md, null, $margin-md, null);
+  margin: $margin-md 0;
 }
 .my-lg {
-  @include margin($margin-lg, null, $margin-lg, null);
+  margin: $margin-lg 0;
+}
+.my-none {
+  margin: $margin-none 0;
 }
 
 // all axes
+.ma-xs {
+  margin: $margin-xs;
+}
 .ma-sm {
-  @include margin($margin-sm);
+  margin: $margin-sm;
 }
 .ma-md {
-  @include margin($margin-md);
+  margin: $margin-md;
 }
 .ma-lg {
-  @include margin($margin-lg);
+  margin: $margin-lg;
+}
+.ma-none {
+  margin: $margin-none;
 }
 
 
@@ -204,24 +373,24 @@ button:focus-visible {
 
 // vertical axis
 .px-sm {
-  @include padding(null, $padding-sm);
+  @include padding(0, $padding-sm);
 }
 .px-md {
-  @include padding(null, $padding-md);
+  @include padding(0, $padding-md);
 }
 .px-lg {
-  @include padding(null, $padding-lg);
+  @include padding(0, $padding-lg);
 }
 
 // horizontal axis
 .py-sm {
-  @include padding($padding-sm, null, $padding-sm, null);
+  @include padding($padding-sm, 0, $padding-sm, 0);
 }
 .py-md {
-  @include padding($padding-md, null, $padding-md, null);
+  @include padding($padding-md, 0, $padding-md, 0);
 }
 .py-lg {
-  @include padding($padding-lg, null, $padding-lg, null);
+  @include padding($padding-lg, 0, $padding-lg, 0);
 }
 
 // all axes
